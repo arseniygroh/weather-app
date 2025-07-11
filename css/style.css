@@ -1,0 +1,142 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    background-color: #222;
+}
+
+* {
+    font-family: "Poppins", "Arial", sans-serif;
+}
+
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.search__box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    justify-content: space-between;
+}
+
+.search__box input {
+    background-color: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    font-size: 18px;
+}
+
+.search__box button {
+    background-color: #FFB23F;
+    padding: 16px 28px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.27777778; /* 23/18 */
+    border-radius: 5px;
+    transition: background-color 0.3s ease-out;
+}
+
+.search__box button:hover {
+    background-color: #f3b75c;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.temp {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.desc {
+    font-size: 18px;  
+}
+
+.desc:not(:last-child) {
+    margin-top: 15px;
+}
+
+.city {
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    column-gap: 10px;
+}
+
+.col img {
+    width: 40px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.output {
+    align-self: flex-start;
+    color: red;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (max-width: 767.97px) {
+    .card {
+        width: 100%;
+        border-radius: 0px;
+        max-width: none;
+        margin: 0;
+    }
+    .search__box {
+        flex-direction: column;
+        row-gap: 15px;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 467.97px) {
+    .details {
+        flex-direction: column;
+        row-gap: 22px;
+    }
+
+    .humidity, .wind {
+        font-size: 22px;
+    }
+}
